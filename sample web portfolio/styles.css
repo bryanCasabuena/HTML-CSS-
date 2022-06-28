@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Gothic&family=Monoton&family=Poppins:wght@500&display=swap');
+
+* {
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 10px;
+    font-family: 'Poppins', sans-serif;
+}
+a {
+    text-decoration: none;
+}
+.container {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    margin-left: 20px;
+}
+#hero {
+    background-image: url("qqq.jpg");
+    background-size: cover;
+    background-position: top center;
+    position: relative;
+    z-index: 1;
+
+}
+#hero::after {
+    content: '';
+    position: absolute ;
+    left: 0; 
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    opacity: .2;
+    z-index: -1;
+}
+#hero h1 {
+    display: black;
+    font-size: 4rem;
+    width: fit-content;
+    position: relative;
+    color: whitesmoke;
+}
+#hero h1 span {
+    position: relative;
+    top:0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: crimson;
+    animation: text_reveal_box 1s ease;
+    animation-delay: 1s;
+}
+#hero .cta {
+    display: inline-block;
+    padding: 10px 13px;
+    color: white;
+    background-color: transparent;
+    border: 2px solid crimson; 
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    margin-top: 30px;
+    transition: 0.3s ease;
+    transition-property: background-color color;
+    
+}
+#hero .cta:hover {
+    color: white;
+    background-color: crimson;
+}
+@keyframes text_reveal_box {
+     50% {
+        width: 0%;
+        right: 100%;
+    }
+    100% {
+        width: 0%;
+        left: 9%;
+        right: 10%;
+    }
+  
+}
+header .container
